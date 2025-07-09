@@ -20,8 +20,8 @@ interface SettingsState {
   pushToken: string;
 }
 const initialState: SettingsState = {
-  baseUrl: 'app.chatwoot.com',
-  installationUrl: 'https://app.chatwoot.com/',
+  baseUrl: 'experience.boi-dev-kube1.boise.avelabs.ai',
+  installationUrl: 'https://experience.boi-dev-kube1.boise.avelabs.ai/',
   uiFlags: {
     isSettingUrl: false,
     isUpdating: false,
@@ -37,7 +37,7 @@ const initialState: SettingsState = {
     selected_push_flags: [],
     user_id: 0,
   },
-  webSocketUrl: 'wss://app.chatwoot.com/cable',
+  webSocketUrl: 'wss://experience.boi-dev-kube1.boise.avelabs.ai/cable',
   theme: 'system',
   version: '',
   pushToken: '',

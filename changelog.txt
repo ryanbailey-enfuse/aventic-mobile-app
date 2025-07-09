@@ -1,0 +1,7 @@
+Removed from package.json dependencies
+
+"@react-native-firebase/app": "^21.7.1",
+"@react-native-firebase/messaging": "^21.7.1",
+
+
+GoogleService-Info.plist and google-services.json are fake files. They should be changed.

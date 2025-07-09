@@ -2,22 +2,22 @@ import { ExpoConfig, ConfigContext } from 'expo/config';
 
 export default ({ config }: ConfigContext): ExpoConfig => {
   return {
-    name: 'Chatwoot',
+    name: 'Aventic',
     slug: process.env.EXPO_PUBLIC_APP_SLUG || 'chatwoot-mobile',
     version: '4.0.19',
     orientation: 'portrait',
-    icon: './assets/icon.png',
+    icon: './aventic_branding/PNG/logo_icon.png',
     userInterfaceStyle: 'light',
     newArchEnabled: false,
     splash: {
-      image: './assets/splash.png',
+      image: './aventic_branding/PNG/logo_with_name_dark.png',
       resizeMode: 'contain',
       backgroundColor: '#ffffff',
       enableFullScreenImage_legacy: true,
     },
     ios: {
       supportsTablet: true,
-      bundleIdentifier: 'com.chatwoot.app',
+      bundleIdentifier: 'com.aventicmobile.app',
       infoPlist: {
         NSCameraUsageDescription:
           'This app requires access to the camera to upload images and videos.',
@@ -32,11 +32,11 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       // Please use the relative path to the google-services.json file
       googleServicesFile: process.env.EXPO_PUBLIC_IOS_GOOGLE_SERVICES_FILE,
       entitlements: { 'aps-environment': 'production' },
-      associatedDomains: ['applinks:app.chatwoot.com'],
+      associatedDomains: ['applinks:chatwoot.boi-dev-kube1.boise.avelabs.ai'],
     },
     android: {
-      adaptiveIcon: { foregroundImage: './assets/adaptive-icon.png', backgroundColor: '#ffffff' },
-      package: 'com.chatwoot.app',
+      adaptiveIcon: { foregroundImage: './aventic_branding/PNG/logo_icon.png', backgroundColor: '#ffffff' },
+      package: 'com.aventicmobile.app',
       permissions: [
         'android.permission.CAMERA',
         'android.permission.READ_EXTERNAL_STORAGE',
@@ -53,7 +53,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
           data: [
             {
               scheme: 'https',
-              host: 'app.chatwoot.com',
+              host: 'chatwoot.boi-dev-kube1.boise.avelabs.ai/',
               pathPrefix: '/app/accounts/',
               pathPattern: '/*/conversations/*',
             },
@@ -68,18 +68,18 @@ export default ({ config }: ConfigContext): ExpoConfig => {
         storybookEnabled: process.env.EXPO_STORYBOOK_ENABLED,
       },
     },
-    owner: 'chatwoot',
+    owner: 'rb-enfuse',
     plugins: [
       'expo-font',
       ['react-native-permissions', { iosPermissions: ['Camera', 'PhotoLibrary', 'MediaLibrary'] }],
-      [
-        '@sentry/react-native/expo',
-        {
-          url: 'https://sentry.io/',
-          project: process.env.EXPO_PUBLIC_SENTRY_PROJECT_NAME,
-          organization: process.env.EXPO_PUBLIC_SENTRY_ORG_NAME,
-        },
-      ],
+      // [
+      //   '@sentry/react-native/expo',
+      //   {
+      //     url: 'https://sentry.io/',
+      //     project: process.env.EXPO_PUBLIC_SENTRY_PROJECT_NAME,
+      //     organization: process.env.EXPO_PUBLIC_SENTRY_ORG_NAME,
+      //   },
+      // ],
       '@react-native-firebase/app',
       '@react-native-firebase/messaging',
       [

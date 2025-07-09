@@ -110,7 +110,7 @@ const LoginScreen = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={tailwind.style('px-6 pt-24')}>
           <Image
-            source={require('@/assets/images/logo.png')}
+            source={require('@/assets/aventic_images/logo.png')}
             style={tailwind.style('w-10 h-10')}
             resizeMode="contain"
           />
