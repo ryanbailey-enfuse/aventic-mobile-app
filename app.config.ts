@@ -4,7 +4,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
   return {
     name: 'Aventic',
     slug: process.env.EXPO_PUBLIC_APP_SLUG || 'chatwoot-mobile',
-    version: '4.0.19',
+    version: '4.0.20',
     orientation: 'portrait',
     icon: './aventic_branding/PNG/logo_icon.png',
     userInterfaceStyle: 'light',
